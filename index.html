@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Médias Escolares</title>
+
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <main id="tela-principal">
+    <section class="conteudo" id="formulario">
+      <h1>Calcular Médias</h1>
+      <form action="#" method="post">
+        <div class="form-group">
+          <label 
+          for="nota1">Nota 1</label>
+          <input 
+          type="number" 
+          name="nota1" 
+          id="nota1"
+          min="0.0"
+          max="10.0"
+          step="0.1"
+          autofocus required onblur="validarNumero(this)"
+          >
+        </div>
+
+        <div class="form-group">
+          <label 
+          for="nota2">Nota 2</label>
+          <input 
+          type="number" 
+          name="nota2" 
+          id="nota2"
+          min="0.0"
+          max="10.0"
+          step="0.1"
+          autofocus required onBlur="validarNumero(this)"
+          >
+        </div>
+
+        <div class="form-group">
+          <button 
+          class="btn" 
+          id="btnCalc"
+          type="submit">Calcular</button>
+
+          <button 
+          class="btn" 
+          id="btnReset"
+          type="submit">Limpar</button>
+        </div>
+
+        <div class="form-group">
+          <label for="media">Média</label>
+          <input type="number" name="media" id="media" value="" readOnly />
+          </div>
+
+        <div class="form-group">
+          <input type="text" name="situacao" id="situacao" class="box" placeholder="Situação Final" readonly>
+        </div>
+
+      </form>
+
+      <p class="" id="aviso"></p>
+    </section>
+  </main>
+
+  <script src="./scripts.js"></script>
+  
+</body>
+</html>
